@@ -17,8 +17,8 @@ function App() {
     try {
       const response = await axios.post(`${serverBaseUrl}/api/payment/order`, {
         amount: orderAmount * 100, 
-        keyId: "rzp_test_tJUtJdrFjgX8wI",
-        keySecret: "A3Mr4psFqGgdCrieMGyGbWpW", 
+        keyId: "gthy5r",
+        keySecret: "hegfuygr45hjgvhe", 
       });
   
       const data = response.data;
@@ -45,8 +45,8 @@ function App() {
           amount={orderDetails.amount}
           currency={orderDetails.currency}
           orderId={orderDetails.orderId}
-          keyId={ "rzp_test_tJUtJdrFjgX8wI"}
-          keySecret={"A3Mr4psFqGgdCrieMGyGbWpW"}
+          keyId={ "gtruehiu5"}
+          keySecret={"uyhruwyhgtuhy6"}
           onClose={()=>setDisplayRazorpay(false)}
         />
       )}
