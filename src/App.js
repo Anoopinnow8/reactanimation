@@ -1,11 +1,14 @@
 import React, { useRef, useEffect, useState } from "react";
 import Card from "./component/Card";
 import "./App.css";
+import "./style/scss/main.scss"
 import axios from 'axios';
 import RenderRazorpay from "./component/RenderRazorpay";
+import TransAction from "./page/transaction";
 
 function App() {
   const [displayRazorpay, setDisplayRazorpay] = useState(false);
+  const [showUserTransaction, setShowUserTransAction] = useState(true);
   const [orderDetails, setOrderDetails] = useState({
     orderId: null,
     currency: null,
@@ -39,6 +42,9 @@ function App() {
   console.log(orderDetails,"orderDetails")
   return (
     <div className="App">
+{showUserTransaction?<TransAction/>
+:
+<> 
       <Card onClick={handleCreateOrder} />
       {displayRazorpay && (
         <RenderRazorpay
@@ -49,7 +55,8 @@ function App() {
           keySecret={"uyhruwyhgtuhy6"}
           onClose={()=>setDisplayRazorpay(false)}
         />
-      )}
+        )}
+        </>}
     </div>
   );
 }
