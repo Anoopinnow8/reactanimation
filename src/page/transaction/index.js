@@ -3,6 +3,7 @@ import Filter from '../../component/Filter';
 import Table from '../../component/Table';
 import Chart from "../../component/Chart"
 import BarGraph from '../../component/BarGraph';
+import Loader from '../../component/Loader';
 const TransAction = () => {
   //npm install react-chartjs-2 chart.js
 
@@ -13,7 +14,7 @@ const TransAction = () => {
       <Chart/>
       <Filter/>
       <Table/>
-
+<Loader show={true}/>
     </div>
   )
 }

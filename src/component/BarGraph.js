@@ -66,7 +66,6 @@ const BarGraph = () => {
       },
     },
   };
-
   return (
     <div style={{ width: '100%', height: '500px' }}>
       <Bar data={data} options={options} />
